@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riverside Insights</title>
+
+    <!-- ////////////////////////////////////  Css links  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- ////////////////////////////////////  header  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+      <div class="header">
+        <div class="header-container">
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="" />
+          </div>
+
+          <div class="side-details">
+            <p>Hello Simu1</p>
+            <div class="divider"></div>
+            <p>Home</p>
+            <div class="divider"></div>
+            <p>Logout</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ////////////////////////////////////  pool body  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+      <div class="pool container">
+        <div class="pool-container">
+          <!-- ////////////////////////////////////  pool progress bar  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="pool-progress">
+            <div class="pool-progress-container">
+              <div class="pool-progress-bar">
+                <div class="progress active">
+                  <h4>Pool</h4>
+                  <div class="progress-circle"></div>
+                </div>
+
+                <div class="progress">
+                  <h4>Items</h4>
+                  <div class="progress-circle"></div>
+                </div>
+
+                <div class="progress">
+                  <h4>Score</h4>
+                  <div class="progress-circle"></div>
+                </div>
+
+                <div class="progress">
+                  <h4>Result</h4>
+                  <div class="progress-circle"></div>
+                </div>
+              </div>
+
+              <div class="progress-line">
+                <div class="pool-progress-line active"></div>
+                <div class="pool-progress-line"></div>
+                <div class="pool-progress-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ////////////////////////////////////  pool form body  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+          <form class="pool-form">
+            <div class="pool-form-container">
+              <div class="form1" id="form1">
+                <!-- ////////////////////////////////////  
+                pool form left side \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                <div class="pool-form-left">
+                  <!-- ////////////////////////////////////  subject container \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="subject-container">
+                    <h4>Subject</h4>
+                    <div class="subject">
+                      <div>
+                        <input
+                          type="radio"
+                          name="subject"
+                          id="reading"
+                          value="Reading" />
+                        <label for="reading">Reading</label>
+                      </div>
+
+                      <div>
+                        <input
+                          type="radio"
+                          name="subject"
+                          id="math"
+                          value="Math" />
+                        <label for="math">Math</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  grade container \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="grade-container pool-big custom-arrow">
+                    <label for="grade" required>Grade</label>
+                    <select id="grade">
+                      <option value="" selected>--select--</option>
+                      <option value="A+">A+</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="D">D</option>
+                    </select>
+                    <div class="arrow-icon">
+                      <div></div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  normal theta distribution \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="normal-theta-container">
+                    <h4>Theta distribution</h4>
+
+                    <input
+                      type="radio"
+                      name="theta-distribution"
+                      id="normal-theta-distribution" />
+                    <label for="normal-theta-distribution">Normal</label>
+                  </div>
+
+                  <!-- ////////////////////////////////////  normal theta mean and sd values \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="normal-theta-values">
+                    <div class="mean-container pool-small">
+                      <label for="mean">Mean</label>
+                      <input type="number" id="mean" class="mean" />
+                    </div>
+                    <div class="sd-container pool-small">
+                      <label for="sd">SD</label>
+                      <input type="number" id="sd" class="sd" />
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  normal theta min max values \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="theta-ranges-container">
+                    <h4>Theta Ranges</h4>
+                    <div class="theta-ranges">
+                      <div class="pool-small">
+                        <label for="min-theta">Min</label>
+                        <input type="number" name="min-theta" id="min-theta" />
+                      </div>
+
+                      <div class="pool-small">
+                        <label for="max-theta">Max</label>
+                        <input type="number" name="max-theta" id="max-theta" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  theta replication values \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="replication-data">
+                    <h4>Generate Replication Data Sets</h4>
+                    <div class="pool-big">
+                      <label for="replicationNo">Number Of Replication</label>
+                      <input
+                        type="number"
+                        name="replicationNo"
+                        id="replicationNo" />
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  IRT model values \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="irt-model-container">
+                    <h4>IRT Model</h4>
+                    <div class="irt-model">
+                      <div>
+                        <input
+                          type="radio"
+                          name="irt-model"
+                          id="rasch"
+                          value="rasch/1pl" />
+                        <label for="rasch">Rasch/1 PL</label>
+                      </div>
+
+                      <div>
+                        <input
+                          type="radio"
+                          name="irt-model"
+                          id="2pl"
+                          value="2pl" />
+                        <label for="2pl">2PL</label>
+                      </div>
+
+                      <div>
+                        <input
+                          type="radio"
+                          name="irt-model"
+                          id="3pl"
+                          value="3pl" />
+                        <label for="3pl">3PL</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ////////////////////////////////////  
+                pool form right side \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                <div class="pool-form-right">
+                  <!-- ////////////////////////////////////  
+                pool-items-container \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="pool-item-container">
+                    <h4>Item Pool</h4>
+                    <div class="pool-item pool-input-big custom-arrow">
+                      <select id="item-pool">
+                        <option value="" selected>--select--</option>
+                        <option value="itempool_math_01_2019">
+                          itempool_math_01_2019
+                        </option>
+                        <option value="itempool_math_01_2020">
+                          itempool_math_01_2020
+                        </option>
+                        <option value="itempool_math_01_2021">
+                          itempool_math_01_2021
+                        </option>
+                        <option value="itempool_math_01_2022">
+                          itempool_math_01_2022
+                        </option>
+                        <option value="itempool_math_01_2023">
+                          itempool_math_01_2023
+                        </option>
+                      </select>
+                      <div class="arrow-icon">
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  
+                theta examinees number \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="examinees-no pool-big custom-arrow">
+                    <label for="examinees">Number Of Examinees</label>
+                    <input
+                      type="number"
+                      name="examinees"
+                      id="examinees"
+                      value="0" />
+
+                    <div class="arrow-icon2">
+                      <div class="increment"></div>
+                      <div class="decrement"></div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  
+                uniform theta distribution  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="uniform-theta-container">
+                    <input
+                      type="radio"
+                      name="theta-distribution"
+                      id="uniform-theta-distribution" />
+                    <label for="uniform-theta-distribution">Uniform</label>
+                  </div>
+
+                  <!-- ////////////////////////////////////  
+                uniform theta min max values  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="uniform-theta-values">
+                    <div class="pool-small">
+                      <label for="min-uniform">Min</label>
+                      <input
+                        type="number"
+                        name="min-uniform"
+                        id="min-uniform" />
+                    </div>
+                    <div class="pool-small">
+                      <label for="max-uniform">Max</label>
+                      <input type="number" name="max-uniform" id="max-theta" />
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  
+                uniform theta increment values \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="theta-increment-scaling-container">
+                    <div class="theta-increment-container">
+                      <h4>Theta Increment</h4>
+                      <div class="theta-increment pool-small">
+                        <input
+                          type="number"
+                          name="theta-increment"
+                          id="theta-increment" />
+                      </div>
+                    </div>
+
+                    <!-- ////////////////////////////////////  
+                uniform scaling values \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                    <div class="theta-scaling-container">
+                      <h4>Scaling</h4>
+                      <div class="theta-scaling">
+                        <div>
+                          <input
+                            type="radio"
+                            name="scaling"
+                            id="scaling-1.0"
+                            value="scaling-1.0" />
+                          <label for="scaling-1.0">1.0</label>
+                        </div>
+                        <div>
+                          <input
+                            type="radio"
+                            name="scaling"
+                            id="scaling-1.7"
+                            value="scaling-1.7" />
+                          <label for="scaling-1.7">1.7</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////////////  
+                items/pool characteristics \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+                  <div class="items-pool-container">
+                    <h4>Item/Pool Characteristics</h4>
+                    <div class="pool-big">
+                      <label for="items/pool">Number Of Items/Pool</label>
+                      <input type="number" name="item/pool" id="items/pool" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form2" id="form2">
+                <div class="pool-form-left">
+                  <!-- ////////////////////////////////////  
+                passage and item based section \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                  <div class="passage-based-container">
+                    <h4>Item or Passage Based</h4>
+                    <div class="pool-based">
+                      <div>
+                        <input
+                          type="radio"
+                          name="pool-based"
+                          id="item"
+                          value="item-based" />
+                        <label for="item">item</label>
+                      </div>
+
+                      <div>
+                        <input
+                          type="radio"
+                          name="pool-based"
+                          id="passage"
+                          value="passage" />
+                        <label for="passage">passage</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="domain-container">
+                    <div class="pool-big">
+                      <label for="numbers-of-domain">Number Of Domains</label>
+                      <input type="number" name="numbers-of-domain" id="" />
+                    </div>
+                  </div>
+
+                  <div class="passage-type-container">
+                    <h4>Number of Passages Per type (For Reading)</h4>
+                    <div class="pool-big">
+                      <label for="passages-type-number">Information</label>
+                      <input type="number" name="passages-type-number" id="" />
+                    </div>
+                  </div>
+
+                  <div class="prior-ability-container">
+                    <h4>Prior Abilty Estimate</h4>
+                    <div class="prior-ability">
+                      <div>
+                        <input
+                          type="radio"
+                          name="yes-prior-ability"
+                          id="yes-prior-ability"
+                          value="yes-prior-ability" />
+                        <label for="yes-prior-ability">Yes</label>
+                      </div>
+
+                      <div>
+                        <input
+                          type="radio"
+                          name="no-prior-ability"
+                          id="no-prior-ability"
+                          value="no-prior-ability" />
+                        <label for="no-prior-ability">No</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="theta-input-container">
+                    <div class="pool-big">
+                      <label for="theta-input">Input Theta</label>
+                      <input type="number" name="theta-input" id="" />
+                    </div>
+                  </div>
+
+                  <div class="item-set-container">
+                    <h4>Routing Item Set</h4>
+                    <div class="pool-big">
+                      <label for="item-set">Number of Items</label>
+                      <input type="number" name="item-set" id="" />
+                    </div>
+                  </div>
+
+                  <div class="item-selection-container">
+                    <h4>
+                      Item Selection after a routing set (interim theta
+                      computation)
+                    </h4>
+                    <div class="item-selection">
+                      <div>
+                        <input type="radio" name="mle" id="mle" value="mle" />
+                        <label for="mle">MLE</label>
+                      </div>
+
+                      <div>
+                        <input type="radio" name="eap" id="eap" value="eap" />
+                        <label for="eap">EAP</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pool-form-right">
+                  <div class="domain-name-container">
+                    <div class="domain-name pool-input-big custom-arrow">
+                      <select id="domain-name">
+                        <option value="" selected>-- select --</option>
+                        <option value="google">google</option>
+                        <option value="bing">bing</option>
+                        <option value="amazon">amazon</option>
+                      </select>
+                      <div class="arrow-icon">
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="literary-container">
+                    <div class="pool-big">
+                      <label for="literary-input">literary</label>
+                      <input type="number" name="literary-input" id="" />
+                    </div>
+                  </div>
+
+                  <div class="source-file-container">
+                    <div class="pool-big">
+                      <label for="source-file">Source File</label>
+                      <input type="number" name="source-file" id="" />
+                    </div>
+                  </div>
+
+                  <div class="number-passages-container">
+                    <div class="pool-big">
+                      <label for="number-passages">Number Of Passages</label>
+                      <input type="number" name="number-passages" id="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ////////////////////////////////////  
+                form submission buttons\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+            <div class="formBtn-container">
+              <!-- <a href="" class="backBtn">Back</a> -->
+              <!-- <a href="" class="nextBtn">Next</a> -->
+
+              <button class="backBtn" type="button">Back</button>
+              <button class="nextBtn" type="button">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
